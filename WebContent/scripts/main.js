@@ -183,7 +183,7 @@
   
            // The request parameters
            // var url = 'http://www.mocky.io/v2/5a4e84ea120000331724da21';
-           var url = 'http://localhost:8080/Titan/search';
+           var url = '/Titan/search';
            var params = 'user_id=' + user_id + '&lat=' + lat + '&lon=' + lng;
            var req = JSON.stringify({});
   
@@ -215,7 +215,7 @@
            activeBtn('fav-btn');
   
            // The request parameters
-           var url = 'http://localhost:8080/Titan/history';
+           var url = '/Titan/history';
            var params = 'user_id=' + user_id;
            var req = JSON.stringify({});
   
@@ -243,7 +243,7 @@
            activeBtn('recommend-btn');
   
            // The request parameters
-           var url = 'http://localhost:8080/Titan/recommendation';
+           var url = '/Titan/recommendation';
            var params = 'user_id=' + user_id + '&lat=' + lat + '&lon=' + lng;
   
            var req = JSON.stringify({});
@@ -288,7 +288,7 @@
   
            // The request parameters
            //var url = 'http://www.mocky.io/v2/5a2462462e0000570f83bf99';
-           var url = 'http://localhost:8080/Titan/history';
+           var url = '/Titan/history';
            var req = JSON.stringify({
                user_id : user_id,
                favorite : [ item_id ]
