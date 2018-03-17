@@ -1,6 +1,7 @@
 package rpc;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -52,5 +53,20 @@ public class RecommendItem extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+	/*
+	 * base on cross-origin-access, need to handle request on Option method
+	 */
+	protected void doOptions(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
+		response.setHeader("Access-Control-Max-Age", "3600");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Headers", "content-type");
+		response.setHeader("Access-Control-Allow-Methods", "GET");
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+
+		PrintWriter out = response.getWriter();
+		out.flush();
+	}
 }

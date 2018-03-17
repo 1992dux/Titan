@@ -31,7 +31,6 @@ public class SearchItem extends HttpServlet {
      */
     public SearchItem() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -75,6 +74,9 @@ public class SearchItem extends HttpServlet {
 		doGet(request, response);
 	}
 	
+	/*
+	 * base on cross-origin-access, need to handle request on Option method
+	 */
 	protected void doOptions(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setHeader("Access-Control-Max-Age", "3600");
